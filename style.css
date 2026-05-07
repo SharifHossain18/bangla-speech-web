@@ -1,0 +1,102 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Noto Sans Bengali', 'Siyam Rupali', Arial, sans-serif;
+}
+
+body {
+    background: #f5f5f5;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.container {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    width: 100%;
+    max-width: 500px;
+}
+
+h1 {
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 24px;
+}
+
+.text-display {
+    background: #f9f9f9;
+    border: 2px solid #e0e0e0;
+    border-radius: 10px;
+    padding: 20px;
+    min-height: 200px;
+    margin-bottom: 25px;
+    font-size: 18px;
+    line-height: 1.6;
+    color: #333;
+    word-wrap: break-word;
+}
+
+.controls {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.btn {
+    flex: 1;
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+#startBtn {
+    background: #27ae60;
+    color: white;
+}
+
+#startBtn:hover:not(:disabled) {
+    background: #219653;
+}
+
+#stopBtn {
+    background: #e74c3c;
+    color: white;
+}
+
+#stopBtn:hover:not(:disabled) {
+    background: #c0392b;
+}
+
+.btn:disabled {
+    background: #bdc3c7;
+    cursor: not-allowed;
+}
+
+.status {
+    text-align: center;
+    margin-bottom: 15px;
+    color: #7f8c8d;
+    font-size: 14px;
+    min-height: 20px;
+}
+
+#copyBtn {
+    background: #3498db;
+    color: white;
+    width: 100%;
+}
+
+#copyBtn:hover {
+    background: #2980b9;
+}

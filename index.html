@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>বাংলা স্পিচ টু টেক্সট</title>
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="icon.png">
+</head>
+<body>
+    <div class="container">
+        <h1>বাংলা স্পিচ টু টেক্সট</h1>
+        <div class="text-display" id="textDisplay">এখানে টেক্সট দেখা যাবে...</div>
+        <div class="controls">
+            <button id="startBtn" class="btn">রেকর্ড শুরু করুন</button>
+            <button id="stopBtn" class="btn btn-stop" disabled>রেকর্ড বন্ধ করুন</button>
+        </div>
+        <div class="status" id="status"></div>
+        <button id="copyBtn" class="btn btn-copy">টেক্সট কপি করুন</button>
+    </div>
+    <script src="app.js"></script>
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('service-worker.js');
+        }
+    </script>
+</body>
+</html>
