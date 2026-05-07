@@ -11,18 +11,39 @@
 <body>
     <div class="container">
         <h1>বাংলা স্পিচ টু টেক্সট</h1>
-        <div class="text-display" id="textDisplay">এখানে টেক্সট দেখা যাবে...</div>
-        <div class="controls">
-            <button id="startBtn" class="btn">রেকর্ড শুরু করুন</button>
-            <button id="stopBtn" class="btn btn-stop" disabled>রেকর্ড বন্ধ করুন</button>
+        
+        <div class="lang-selector">
+            <label>ভাষা নির্বাচন:</label>
+            <select id="langSelect">
+                <option value="bn-BD">বাংলাদেশ (bn-BD)</option>
+                <option value="bn-IN">ভারত (bn-IN)</option>
+            </select>
         </div>
+
+        <div class="text-display" id="textDisplay">
+            <span class="placeholder">এখানে টেক্সট দেখা যাবে...</span>
+        </div>
+
+        <div class="controls">
+            <button id="startBtn" class="btn btn-start">
+                <span class="btn-icon">🎤</span> রেকর্ড শুরু করুন
+            </button>
+            <button id="stopBtn" class="btn btn-stop" disabled>
+                <span class="btn-icon">⏹</span> রেকর্ড বন্ধ করুন
+            </button>
+        </div>
+
         <div class="status" id="status"></div>
-        <button id="copyBtn" class="btn btn-copy">টেক্সট কপি করুন</button>
+
+        <div class="action-buttons">
+            <button id="copyBtn" class="btn btn-copy">টেক্সট কপি করুন</button>
+            <button id="clearBtn" class="btn btn-clear">মুছুন</button>
+        </div>
     </div>
     <script src="app.js"></script>
     <script>
         if ('serviceWorker' in navigator) {
-            navigator.serviceWorker.register('service-worker.js');
+            navigator.serviceWorker.register('service-worker.js').catch(e => console.log('SW error:', e));
         }
     </script>
 </body>
